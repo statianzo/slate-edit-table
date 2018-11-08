@@ -3,31 +3,18 @@
 import expect from 'expect';
 import fs from 'fs';
 import path from 'path';
-import { Value, Schema, KeyUtils } from 'slate';
+import { Value, Editor, KeyUtils } from 'slate';
 import hyperprint from 'slate-hyperprint';
 import EditTable from '../lib';
 
 const PLUGIN = EditTable();
-const SCHEMA = Schema.create({
-    plugins: [PLUGIN]
-});
-
-function deserializeValue(value) {
-    return Value.fromJSON(
-        {
-            document: value.document,
-            schema: SCHEMA,
-            selection: value.selection
-        },
-        { normalize: false }
-    );
-}
 
 describe('slate-edit-table', () => {
     const tests = fs.readdirSync(__dirname);
 
     tests.forEach(test => {
         if (test[0] === '.' || path.extname(test).length > 0) return;
+        if (!test.match(/^insert-table$/)) return;
 
         it(test, () => {
             KeyUtils.resetGenerator();
@@ -38,10 +25,12 @@ describe('slate-edit-table', () => {
                 fs.existsSync(expectedPath) && require(expectedPath).default;
 
             const runChange = require(path.resolve(dir, 'change.js')).default;
+            const editor = new Editor({
+                plugins: [PLUGIN],
+                value: input,
+            });
 
-            const valueInput = deserializeValue(input);
-
-            const newChange = runChange(PLUGIN, valueInput.change());
+            const newChange = runChange(PLUGIN, editor);
 
             if (expected) {
                 const newDoc = hyperprint(newChange.value.document, {
