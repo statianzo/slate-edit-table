@@ -3036,9 +3036,10 @@ is-glob@^4.0.0:
   dependencies:
     is-extglob "^2.1.1"
 
-is-hotkey@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/is-hotkey/-/is-hotkey-0.1.3.tgz#8a129eec16f3941bd4f37191e02b9c3e91950549"
+is-hotkey@0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/is-hotkey/-/is-hotkey-0.1.4.tgz#c34d2c85d6ec8d09a871dcf71931c8067a824c7d"
+  integrity sha512-Py+aW4r5mBBY18TGzGz286/gKS+fCQ0Hee3qkaiSmEPiD0PqFpe0wuA3l7rTOUKyeXl8Mxf3XzJxIoTlSv+kxA==
 
 is-in-browser@^1.1.3:
   version "1.1.3"
@@ -4576,9 +4577,10 @@ slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
 
-slate-base64-serializer@^0.2.68:
-  version "0.2.68"
-  resolved "https://registry.yarnpkg.com/slate-base64-serializer/-/slate-base64-serializer-0.2.68.tgz#e340335ebefb9e4ef17ad911868e340c69ce16ec"
+slate-base64-serializer@^0.2.87:
+  version "0.2.87"
+  resolved "https://registry.yarnpkg.com/slate-base64-serializer/-/slate-base64-serializer-0.2.87.tgz#bd3e25c04009eecc1f8ca2d161e276c1e482de2a"
+  integrity sha512-IV1TIVM3+IaUJq7Dcf2iNZw/+w1HRKt4iYEcYiG8gjjg67NN7gK/5IaeXBNEj/cp5aGRSDieqbhHEKKmqViNbw==
   dependencies:
     isomorphic-base64 "^1.0.2"
 
@@ -4588,20 +4590,18 @@ slate-dev-environment@^0.2.0:
   dependencies:
     is-in-browser "^1.1.3"
 
-slate-dev-warning@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/slate-dev-warning/-/slate-dev-warning-0.0.1.tgz#f6c36731babea5e301b5bd504fe64911dd24200a"
-
-slate-hotkeys@^0.2.5:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/slate-hotkeys/-/slate-hotkeys-0.2.5.tgz#5e78e535f1305cea2664c0e56a082e9f4919bbc4"
+slate-hotkeys@^0.2.7:
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/slate-hotkeys/-/slate-hotkeys-0.2.7.tgz#a5b613ced4af931b2d74a206f985ee2c63f3b0f9"
+  integrity sha512-k6iaR24w15CSM24jbi6My4WD2ePw4Byn8x3ARz3UtKrfSEO4F8Er/aPxegLhBujNE9u041uBMGeua44rlhemkw==
   dependencies:
-    is-hotkey "^0.1.3"
+    is-hotkey "0.1.4"
     slate-dev-environment "^0.2.0"
 
 slate-hyperprint@^2.2.6:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/slate-hyperprint/-/slate-hyperprint-2.2.6.tgz#5c616be1a2f36ec49af261a3a052782e9d90152a"
+  integrity sha512-1tWNkef6QNagq28YMUweByQx9N8LgwBmbecy6Xx5fyuq4R/zcCET46sDTVidBPwE6sSJsPvxGJCAC6cQavEGyw==
   dependencies:
     indent-string "^3.2.0"
     is-plain-object "^2.0.4"
@@ -4610,23 +4610,32 @@ slate-hyperprint@^2.2.6:
     prettier "1.13.6"
     stringify-object "^3.2.2"
 
-slate-hyperscript@^0.10.7:
-  version "0.10.7"
-  resolved "https://registry.yarnpkg.com/slate-hyperscript/-/slate-hyperscript-0.10.7.tgz#4a9da6d6479f8463f8046e19d10dd3d0850617e2"
+slate-hyperscript@^0.11.17:
+  version "0.11.17"
+  resolved "https://registry.yarnpkg.com/slate-hyperscript/-/slate-hyperscript-0.11.17.tgz#d04727171cbf5e773aaa02721a9d82603f266325"
+  integrity sha512-1LqNuHSOTUzzzIxztkl/Phdt3RjdVDb3N1s3QbpbZl4jjLjdfyC8cN9+RQjLPw/EzoL7iwySoDaSvntYI96WFg==
   dependencies:
     is-plain-object "^2.0.4"
 
-slate-plain-serializer@^0.6.7:
-  version "0.6.7"
-  resolved "https://registry.yarnpkg.com/slate-plain-serializer/-/slate-plain-serializer-0.6.7.tgz#eb545747ebef08c5a148038c5069bf83bf0efdd1"
+slate-plain-serializer@^0.6.26:
+  version "0.6.26"
+  resolved "https://registry.yarnpkg.com/slate-plain-serializer/-/slate-plain-serializer-0.6.26.tgz#74c7e7cd36a7e3d7ecff67dff429a2677210085a"
+  integrity sha512-S6R0ACkq6Qf8eNU+Y/K9HZarUlDHlN1FWcgQIgSMI1Lj1hOsGCa6c4J9tA05ZF7886PLFyYHZXUyAtUQs4m72w==
 
-slate-prop-types@^0.4.66:
-  version "0.4.66"
-  resolved "https://registry.yarnpkg.com/slate-prop-types/-/slate-prop-types-0.4.66.tgz#0509924ecf8a56c0d374aa8a92a22ef23a39deec"
+slate-prop-types@^0.5.17:
+  version "0.5.17"
+  resolved "https://registry.yarnpkg.com/slate-prop-types/-/slate-prop-types-0.5.17.tgz#10385efb005ca05268392b48409f9aeebeb1cf80"
+  integrity sha512-XrFREexTUz14bhTcVVk1Eca5UPAfpeiqTW+66rmAsMzCWb7AOTyReA14vgEaEPVhrt2G2JFNrpNSteUBzdQK0g==
 
-slate-react@^0.18.10:
-  version "0.18.10"
-  resolved "https://registry.yarnpkg.com/slate-react/-/slate-react-0.18.10.tgz#3c38615c51ba16ae8f2d52bde89eb9b79e8a4d10"
+slate-react-placeholder@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/slate-react-placeholder/-/slate-react-placeholder-0.1.5.tgz#62069807da45a9f1187d5e93ecaac9ee1a2bb664"
+  integrity sha512-u4cGJ5XDjsz/Flv9QCZiqkiPwuO+CKNkNd74/De1R8k4mCsH8+sqq/Z3GTSljmKVeYHjUX47xNRHDeV9mvuV4w==
+
+slate-react@^0.21.8:
+  version "0.21.8"
+  resolved "https://registry.yarnpkg.com/slate-react/-/slate-react-0.21.8.tgz#efa160b02fd0ad794c459cffabcfcf3e8ab9d000"
+  integrity sha512-WjMHA3ZR0XmWuqoXDeM5jIaNhOJAfiALauzCtS7s9iMjPgLTpictEG9fTHIH8ZjkUJbwzEgbEX2+wE3XW4xwZw==
   dependencies:
     debug "^3.1.0"
     get-window "^1.1.1"
@@ -4636,27 +4645,31 @@ slate-react@^0.18.10:
     prop-types "^15.5.8"
     react-immutable-proptypes "^2.1.0"
     selection-is-backward "^1.0.0"
-    slate-base64-serializer "^0.2.68"
+    slate-base64-serializer "^0.2.87"
     slate-dev-environment "^0.2.0"
-    slate-dev-warning "^0.0.1"
-    slate-hotkeys "^0.2.5"
-    slate-plain-serializer "^0.6.7"
-    slate-prop-types "^0.4.66"
+    slate-hotkeys "^0.2.7"
+    slate-plain-serializer "^0.6.26"
+    slate-prop-types "^0.5.17"
+    slate-react-placeholder "^0.1.5"
+    tiny-invariant "^1.0.1"
+    tiny-warning "^0.0.3"
 
 slate-simulator@^0.4.66:
   version "0.4.66"
   resolved "https://registry.yarnpkg.com/slate-simulator/-/slate-simulator-0.4.66.tgz#1d50edd9fa0bad5ddf90d2e1bac5276a1fabe1b5"
 
-slate@^0.41.2:
-  version "0.41.2"
-  resolved "https://registry.yarnpkg.com/slate/-/slate-0.41.2.tgz#860806de87cec0d8446f61be423e3c20e3f2db51"
+slate@^0.44.2:
+  version "0.44.2"
+  resolved "https://registry.yarnpkg.com/slate/-/slate-0.44.2.tgz#0c406bd12d2d83d787e3516b64a304451b4c9931"
+  integrity sha512-tbO/+NmFW6RczJqtUgmjqy86hoXTusvwhkv8ObCXab63f71uR03JYYrIrlqcDZmSbnRKKTePN7TKLAZ04wmdFQ==
   dependencies:
     debug "^3.1.0"
     direction "^0.1.5"
     esrever "^0.2.0"
     is-plain-object "^2.0.4"
     lodash "^4.17.4"
-    slate-dev-warning "^0.0.1"
+    tiny-invariant "^1.0.1"
+    tiny-warning "^0.0.3"
     type-of "^2.0.1"
 
 slice-ansi@1.0.0:
@@ -4955,6 +4968,16 @@ timers-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-1.4.2.tgz#c9c58b575be8407375cb5e2462dacee74359f41d"
   dependencies:
     process "~0.11.0"
+
+tiny-invariant@^1.0.1:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-1.0.3.tgz#91efaaa0269ccb6271f0296aeedb05fc3e067b7a"
+  integrity sha512-ytQx8T4DL8PjlX53yYzcIC0WhIZbpR0p1qcYjw2pHu3w6UtgWwFJQ/02cnhOnBBhlFx/edUIfcagCaQSe3KMWg==
+
+tiny-warning@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/tiny-warning/-/tiny-warning-0.0.3.tgz#1807eb4c5f81784a6354d58ea1d5024f18c6c81f"
+  integrity sha512-r0SSA5Y5IWERF9Xh++tFPx0jITBgGggOsRLDWWew6YRw/C2dr4uNO1fw1vanrBmHsICmPyMLNBZboTlxUmUuaA==
 
 tmatch@^2.0.1:
   version "2.0.1"
