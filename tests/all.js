@@ -14,7 +14,7 @@ describe('slate-edit-table', () => {
 
     tests.forEach(test => {
         if (test[0] === '.' || path.extname(test).length > 0) return;
-        if (!test.match(/^insert-table$/)) return;
+        if (!test.match(/contain-rows-mixed$/)) return;
 
         it(test, () => {
             KeyUtils.resetGenerator();

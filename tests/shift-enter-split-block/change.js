@@ -1,20 +1,18 @@
 import expect from 'expect';
 
-export default function(plugin, change) {
-    const blockStart = change.value.document.getDescendant('anchor');
-    const withCursor = change.moveToEndOfNode(blockStart);
+export default function(plugin, editor) {
+  const {value} = editor;
+  const cursorBlock = value.document.getDescendant('anchor');
+  editor.moveToEndOfNode(cursorBlock);
 
-    const result = plugin.onKeyDown(
-        {
-            key: 'Enter',
-            shiftKey: true,
-            preventDefault() {},
-            stopPropagation() {}
-        },
-        withCursor
-    );
+  const result = editor.run('onKeyDown', {
+    key: 'Enter',
+    shiftKey: true,
+    preventDefault() {},
+    stopPropagation() {},
+  });
 
-    expect(result.value.startBlock.type).toBe('paragraph');
+  expect(result.value.startBlock.type).toBe('paragraph');
 
-    return result;
+  return result;
 }
