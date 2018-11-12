@@ -1,16 +1,15 @@
 import expect from 'expect';
 
-export default function(plugin, change) {
-    const res = plugin.onKeyDown(
+export default function(plugin, editor) {
+    const res = editor.run('onKeyDown',
         {
             key: 'Backspace',
             preventDefault() {},
             stopPropagation() {}
         },
-        change
     );
 
     expect(res).toBe(undefined);
 
-    return change;
+    return editor;
 }

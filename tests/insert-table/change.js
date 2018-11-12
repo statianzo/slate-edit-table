@@ -4,5 +4,5 @@ export default function(plugin, editor) {
     editor.moveToRangeOfNode(cursorBlock); // Cursor here: Before|After
     editor.moveForward(6);
 
-    return plugin.commands.insertTable(editor);
+    return editor.insertTable();
 }

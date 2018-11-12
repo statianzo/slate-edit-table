@@ -1,7 +1,7 @@
-export default function(plugin, change) {
-    const { value } = change;
-    const cursorBlock = value.document.getDescendant('anchor');
-    change.moveToRangeOfNode(cursorBlock);
+export default function(plugin, editor) {
+  const {value} = editor;
+  const cursorBlock = value.document.getDescendant('anchor');
+  editor.moveToRangeOfNode(cursorBlock);
 
-    return plugin.changes.removeTable(change);
+  return editor.removeTable();
 }
