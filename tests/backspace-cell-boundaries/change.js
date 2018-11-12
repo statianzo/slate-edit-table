@@ -1,10 +1,7 @@
-export default function(plugin, change) {
-    return plugin.onKeyDown(
-        {
-            key: 'Backspace',
-            preventDefault() {},
-            stopPropagation() {}
-        },
-        change
-    );
+export default function(plugin, editor) {
+  return editor.run('onKeyDown', {
+    key: 'Backspace',
+    preventDefault() {},
+    stopPropagation() {},
+  });
 }

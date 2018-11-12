@@ -30,7 +30,7 @@ describe('slate-edit-table', () => {
                 value: input,
             });
 
-            const newChange = runChange(PLUGIN, editor);
+            const newChange = runChange(null, editor);
 
             if (expected) {
                 const newDoc = hyperprint(newChange.value.document, {
