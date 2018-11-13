@@ -12,7 +12,8 @@ export default (
                     </table_cell>
                     <table_cell>
                         <paragraph>
-                            <link>Row 1, Col 2</link> with some text
+                          <text />
+                          <link>Row 1, Col 2</link> with some text
                         </paragraph>
                     </table_cell>
                     <table_cell>

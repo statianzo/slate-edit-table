@@ -14,7 +14,6 @@ describe('slate-edit-table', () => {
 
     tests.forEach(test => {
         if (test[0] === '.' || path.extname(test).length > 0) return;
-        if (test.match(/^schema-/)) return;
 
         it(test, () => {
             KeyUtils.resetGenerator();

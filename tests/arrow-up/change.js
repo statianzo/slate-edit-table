@@ -13,4 +13,4 @@ export default (plugin, editor) => {
 
   expect(editor.value.startBlock.key).toEqual('destination');
   return result;
-}
+};
