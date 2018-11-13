@@ -1,6 +1,6 @@
 import expect from 'expect';
 
-export default (plugin, editor) => {
+export default (editor) => {
   const {value} = editor;
   const cursorBlock = value.document.getDescendant('anchor');
   editor.moveToEndOfNode(cursorBlock);

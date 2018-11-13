@@ -1,6 +1,6 @@
 import expect from 'expect';
 
-export default function(plugin, editor) {
+export default function(editor) {
     const table = editor.value.document.getClosest(
         'cell',
         el => el.key === 'table'

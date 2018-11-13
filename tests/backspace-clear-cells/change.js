@@ -1,4 +1,4 @@
-export default function(plugin, editor) {
+export default function(editor) {
   const {value} = editor;
   const blockStart = value.document.getDescendant('anchor');
   const blockEnd = value.document.getDescendant('focus');

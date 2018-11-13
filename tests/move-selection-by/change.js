@@ -1,6 +1,6 @@
 import expect from 'expect';
 
-export default function(plugin, editor) {
+export default function(editor) {
     const { value } = editor;
     const cursorBlock = value.document.getDescendant('anchor');
     const offset = 2;

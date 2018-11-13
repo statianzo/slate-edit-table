@@ -1,6 +1,6 @@
 import Slate from 'slate';
 
-export default (plugin, editor) => {
+export default (editor) => {
   debugger
     return editor.normalize();
 };

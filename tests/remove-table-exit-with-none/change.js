@@ -1,4 +1,4 @@
-export default function(prevPlugin, editor) {
+export default function(editor) {
     const cursorBlock = editor.value.document.getDescendant('anchor');
     editor.moveToRangeOfNode(cursorBlock);
 

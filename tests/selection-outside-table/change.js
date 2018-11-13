@@ -1,6 +1,6 @@
 import expect from 'expect';
 
-export default function(plugin, editor) {
+export default function(editor) {
     const { value } = editor;
     const paragraph = value.document.getDescendant('paragraph');
     const table11 = value.document.getDescendant('table11');

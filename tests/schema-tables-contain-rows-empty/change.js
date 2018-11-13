@@ -1,3 +1,3 @@
-export default (plugin, editor) => {
+export default (editor) => {
     return editor.normalize();
 };

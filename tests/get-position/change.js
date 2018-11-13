@@ -1,6 +1,6 @@
 import expect from 'expect';
 
-export default function(plugin, editor) {
+export default function(editor) {
     const position = editor.getPosition();
 
     expect(position.getWidth()).toEqual(3);

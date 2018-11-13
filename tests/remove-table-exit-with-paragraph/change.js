@@ -1,6 +1,6 @@
 import expect from 'expect';
 
-export default function(plugin, editor) {
+export default function(editor) {
   const cursorBlock = editor.value.document.getDescendant('anchor');
   editor.moveToRangeOfNode(cursorBlock);
   editor.removeTable();

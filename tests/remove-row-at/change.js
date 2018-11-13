@@ -1,3 +1,3 @@
-export default function(plugin, editor) {
+export default function(editor) {
     return editor.removeRow(1);
 }
