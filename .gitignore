@@ -42,3 +42,4 @@ example/bundle.js
 \.DS_Store
 
 \.prettierrc\.js
+lib/

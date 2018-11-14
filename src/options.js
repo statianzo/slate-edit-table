@@ -21,16 +21,13 @@ class Options extends Record({
     typeContent: 'paragraph',
     exitBlockType: 'paragraph'
 }) {
-    // The type of table blocks
-    typeTable: string;
-    // The type of row blocks
-    typeRow: string;
-    // The type of cell blocks
-    typeCell: string;
-    // The default type for blocks in cells
-    typeContent: string;
-    // The type of block inserted when exiting
-    exitBlockType: string;
+    // Done as comments to prevent defining properties
+    // https://github.com/babel/babel/issues/8417
+    /*:: typeTable: string; */
+    /*:: typeRow: string; */
+    /*:: typeCell: string; */
+    /*:: typeContent: string; */
+    /*:: exitBlockType: string; */
 
     /*
      * Return a node filter to find a cell.

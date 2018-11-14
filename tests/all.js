@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { Value, Editor, KeyUtils } from 'slate';
 import hyperprint from 'slate-hyperprint';
-import EditTable from '../lib';
+import EditTable from '../src';
 
 const PLUGIN = EditTable();
 

@@ -3,7 +3,9 @@ import { type Value, type Document } from 'slate';
 import { List } from 'immutable';
 
 import type Options from '../options';
-import { isSelectionInTable, TablePosition, createCell } from '../utils';
+import isSelectionInTable from './isSelectionInTable';
+import TablePosition from './TablePosition';
+import createCell from './createCell';
 
 /*
  * Alters what is copied to the clipboard when copying a fragment of a table:

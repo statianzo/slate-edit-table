@@ -1,7 +1,8 @@
 // @flow
 import { type Change, type Range, type Document } from 'slate';
 
-import { insertRow, insertColumn } from '../changes';
+import insertRow from './insertRow';
+import insertColumn from './insertColumn';
 import { TablePosition } from '../utils';
 import type Options from '../options';
 

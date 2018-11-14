@@ -11,16 +11,16 @@ class TablePosition extends Record({
     contentBlock: null,
 }) {
     // Block container for the table
-    tableBlock: ?Block;
+    /*::tableBlock: ?Block;*/
 
     // Block for current row
-    rowBlock: ?Block;
+    /*::rowBlock: ?Block;*/
 
     // Block for current cell
-    cellBlock: ?Block;
+    /*::cellBlock: ?Block;*/
 
     // Current content block in the cell
-    contentBlock: ?Block;
+    /*::contentBlock: ?Block;*/
 
     /**
      * Create a new instance of a TablePosition from a Slate document

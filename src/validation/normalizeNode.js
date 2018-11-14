@@ -15,7 +15,6 @@ function normalizeNode(opts: Options) {
         if (node.type !== opts.typeTable) {
             return undefined;
         }
-
         const rows = node.nodes.filter(isRow);
         const maxColumns = Math.max(
             // Minimum 1 column
