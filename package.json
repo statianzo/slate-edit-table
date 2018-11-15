@@ -18,7 +18,6 @@
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/register": "^7.0.0",
-    "browserify": "^13.3.0",
     "eslint": "^4.15.0",
     "eslint-config-gitbook": "^3.0.0",
     "eslint-plugin-flowtype": "^2.41.0",
@@ -27,8 +26,6 @@
     "eslint-plugin-prettier": "^2.4.0",
     "eslint-plugin-react": "^7.5.1",
     "expect": "^1.20.2",
-    "flow-bin": "^0.73.0",
-    "flow-copy-source": "^1.2.1",
     "gh-pages": "^0.11.0",
     "http-server": "^0.9.0",
     "immutable": "3",
@@ -43,11 +40,10 @@
     "slate": "^0.44.2",
     "slate-hyperprint": "^2.2.6",
     "slate-hyperscript": "^0.11.17",
-    "slate-react": "^0.21.8",
-    "slate-simulator": "^0.4.66",
-    "watchify": "^3.7.0"
+    "slate-react": "^0.21.8"
   },
   "scripts": {
+    "build": "rollup -c",
     "build:dist": "rm -r ./dist; babel ./lib --out-dir ./dist",
     "build:flow": "flow-copy-source -v ./lib/ ./dist/",
     "lint": "eslint ./",

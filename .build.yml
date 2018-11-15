@@ -1,0 +1,16 @@
+image: archlinux
+packages:
+  - nodejs
+  - yarn
+sources:
+  - https://sr.ht/~statianzo/slate-edit-table
+tasks:
+  - setup: |
+      cd slate-edit-table
+      yarn --frozen-lockfile
+  - build: |
+      cd slate-edit-table
+      yarn run build
+  - test: |
+      cd slate-edit-table
+      yarn test
