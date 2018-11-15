@@ -1,6 +1,6 @@
 # @domoinc/slate-edit-table
 
-[![NPM version](https://badge.fury.io/js/@domoinc/slate-edit-table.svg)](http://badge.fury.io/js/@domoinc/slate-edit-table)
+[![npm version](https://badge.fury.io/js/%40domoinc%2Fslate-edit-table.svg)](https://www.npmjs.com/package/@domoinc/slate-edit-table)
 [![builds.sr.ht status](https://builds.sr.ht/~statianzo/slate-edit-table/.build.yml.svg)](https://builds.sr.ht/~statianzo/slate-edit-table/.build.yml?)
 
 A Slate plugin to handle table edition.
