@@ -12,8 +12,7 @@
   ],
   "peerDependencies": {
     "immutable": "^3.8.1",
-    "slate": "^0.41.2",
-    "slate-react": "^0.18.10"
+    "slate": "^0.44.2"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
