@@ -18,4 +18,5 @@ tasks:
       yarn test
   - mirror: |
       cd slate-edit-table
-      git push --mirror https://statianzo:$GITHUB_TOKEN@github.com/statianzo/slate-edit-table
+      git config credential.helper store
+      git push --mirror https://statianzo@github.com/statianzo/slate-edit-table
