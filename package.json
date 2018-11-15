@@ -1,13 +1,13 @@
 {
-  "name": "ndla-slate-edit-table",
+  "name": "@domoinc/ndla-slate-edit-table",
   "description": "A Slate plugin to handle keyboard events in tables.",
-  "version": "0.1.1",
+  "version": "0.20.0",
   "license": "Apache-2.0",
-  "repository": "git://github.com/NDLANO/slate-edit-table.git",
+  "repository": "https://git.sr.ht/~statianzo/slate-edit-table",
   "main": "./lib/index.js",
   "module": "./lib/index.es.js",
   "files": [
-    "dist",
+    "lib",
     "*.md"
   ],
   "peerDependencies": {
@@ -16,6 +16,10 @@
     "slate-react": "^0.18.10"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/register": "^7.0.0",
     "eslint": "^4.15.0",
@@ -47,20 +51,11 @@
     "build:dist": "rm -r ./dist; babel ./lib --out-dir ./dist",
     "build:flow": "flow-copy-source -v ./lib/ ./dist/",
     "lint": "eslint ./",
-    "build-example": "browserify ./example/main.js -o ./example/bundle.js -t [ babelify --presets [ env react stage-0 ] ]",
-    "watch-example": "watchify ./example/main.js -o ./example/bundle.js -t [ babelify --presets [ env react stage-0 ] ] -v",
-    "serve-example": "http-server ./example/ -p 8080",
     "start": "npm run build-example; npm run serve-example",
     "deploy-example": "npm run build-example; gh-pages -d ./example",
     "test": "./node_modules/.bin/mocha ./tests/all.js --compilers js:@babel/register --reporter=list"
   },
   "keywords": [
     "slate"
-  ],
-  "dependencies": {
-    "@babel/core": "^7.1.6",
-    "@babel/preset-env": "^7.1.6",
-    "@babel/preset-flow": "^7.0.0",
-    "@babel/preset-react": "^7.0.0"
-  }
+  ]
 }

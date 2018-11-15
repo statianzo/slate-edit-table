@@ -1,16 +1,14 @@
-# slate-edit-table
+# @domoinc/slate-edit-table
 
-[![NPM version](https://badge.fury.io/js/slate-edit-table.svg)](http://badge.fury.io/js/slate-edit-table)
-[![Linux Build Status](https://travis-ci.org/GitbookIO/slate-edit-table.png?branch=master)](https://travis-ci.org/GitbookIO/slate-edit-table)
+[![NPM version](https://badge.fury.io/js/@domoinc/slate-edit-table.svg)](http://badge.fury.io/js/@domoinc/slate-edit-table)
+[![builds.sr.ht status](https://builds.sr.ht/~statianzo/slate-edit-table/.build.yml.svg)](https://builds.sr.ht/~statianzo/slate-edit-table/.build.yml?)
 
 A Slate plugin to handle table edition.
-
-Demo: [gitbookio.github.io/slate-edit-table/](https://gitbookio.github.io/slate-edit-table/)
 
 ## Install
 
 ```
-npm install slate-edit-table
+npm install @domoinc/slate-edit-table
 ```
 
 ## Features
@@ -36,7 +34,7 @@ Here are how different cases of copy-paste are handled by the plugin:
 ## Simple Usage
 
 ```js
-import EditTable from 'slate-edit-table';
+import EditTable from '@domoinc/slate-edit-table';
 
 const tablePlugin = EditTable(/* options */);
 
