@@ -18,4 +18,5 @@ tasks:
       yarn test
   - mirror: |
       cd slate-edit-table
+      ssh-keyscan github.com >> ~/.ssh/known_hosts
       git push --mirror git@github.com:statianzo/slate-edit-table.git
