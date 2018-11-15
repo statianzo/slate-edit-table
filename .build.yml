@@ -5,7 +5,7 @@ packages:
 sources:
   - https://git.sr.ht/~statianzo/slate-edit-table
 secrets:
-  - f295d888-a1dd-4f89-880a-58b31b4b78af
+  - ea12c20c-bb32-4c92-8a8c-36417ae1fa2d
 tasks:
   - setup: |
       cd slate-edit-table
@@ -18,5 +18,4 @@ tasks:
       yarn test
   - mirror: |
       cd slate-edit-table
-      git config credential.helper store
-      git push --mirror https://statianzo@github.com/statianzo/slate-edit-table
+      git push --mirror git@github.com:statianzo/slate-edit-table.git
