@@ -7,7 +7,7 @@ import type Options from '../options';
 /**
  * Delete the whole table at the given node key
  */
-function removeTableByKey(opts: Options, editor, key: string): Change {
+function removeTableByKey(opts: Options, editor, key: string): * {
     const { value } = editor;
 
     const pos = TablePosition.create(opts, value.document, key);

@@ -8,7 +8,6 @@ import { createCell } from '../utils';
  */
 function normalizeNode(opts: Options) {
     const isRow = node => node.type === opts.typeRow;
-    const isCell = node => node.type === opts.typeCell;
     const countNodes = row => row.nodes.size;
 
     return node => {

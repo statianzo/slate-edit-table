@@ -1,9 +1,6 @@
 // @flow
 
-import { type Change } from 'slate';
-
 import type Options from '../options';
-import { isSelectionInTable } from '../utils';
 
 import onEnter from './onEnter';
 import onModEnter from './onModEnter';

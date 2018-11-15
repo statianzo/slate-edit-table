@@ -20,7 +20,7 @@ function removeRowByKey(opts: Options, change: Change, key: string): Change {
     } else {
         // If last remaining row, clear it instead
         pos.row.nodes.forEach(cell => {
-            cell.nodes.forEach(node => clearCell(opts, change, cell));
+            cell.nodes.forEach(() => clearCell(opts, change, cell));
         });
     }
     // this will also invalidate the selection - move it to the first cell

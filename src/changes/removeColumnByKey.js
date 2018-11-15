@@ -30,7 +30,7 @@ function removeColumnByKey(opts: Options, change: Change, key: string): Change {
         // If last column, clear text in cells instead
         rows.forEach(row => {
             row.nodes.forEach(cell => {
-                cell.nodes.forEach(node => clearCell(opts, change, cell));
+                cell.nodes.forEach(() => clearCell(opts, change, cell));
             });
         });
     }

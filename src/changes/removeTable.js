@@ -9,7 +9,6 @@ import removeTableByKey from './removeTableByKey';
 function removeTable(opts: Options, editor) {
     const { value } = editor;
     const { selection } = value;
-  debugger;
 
     return removeTableByKey(opts, editor, selection.start.key);
 }

@@ -1,7 +1,5 @@
 // @flow
 
-import type { Value } from 'slate';
-
 import type Options from '../options';
 import isRangeInTable from './isRangeInTable';
 
@@ -11,7 +9,7 @@ import isRangeInTable from './isRangeInTable';
 function isSelectionInTable(opts: Options, editor): boolean {
     const {value} = editor;
     const {selection} = value;
-  debugger
+
     if (!selection.start.key) return false;
     return isRangeInTable(opts, value.document, value.selection);
 }

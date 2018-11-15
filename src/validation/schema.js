@@ -1,6 +1,6 @@
 // @flow
 
-import { Block, type Change } from 'slate';
+import { type Change } from 'slate';
 import {
     CHILD_OBJECT_INVALID,
     CHILD_TYPE_INVALID,

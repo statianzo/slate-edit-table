@@ -12,7 +12,6 @@ function isRangeInTable(opts: Options, node: Node, range: Range): boolean {
     const { start, end } = range;
     const startPosition = TablePosition.create(opts, node, start.key);
     const endPosition = TablePosition.create(opts, node, end.key);
-  debugger
 
     // Only handle events in tables
     if (!startPosition.isInTable() || !endPosition.isInTable()) {

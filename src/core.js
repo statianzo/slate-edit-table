@@ -87,8 +87,6 @@ function core(optionsParam: Options | OptionsFormat): Object {
  */
 function bindAndScopeChange(opts: Options, fn: *): * {
     return (editor, ...args) => {
-        const { value } = editor;
-
         if (!editor.isSelectionInTable()) {
             return editor;
         }

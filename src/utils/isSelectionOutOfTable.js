@@ -1,7 +1,5 @@
 // @flow
 
-import type { Value } from 'slate';
-
 import TablePosition from './TablePosition';
 import type Options from '../options';
 
