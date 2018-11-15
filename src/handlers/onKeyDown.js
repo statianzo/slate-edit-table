@@ -20,15 +20,16 @@ const KEY_UP = 'ArrowUp';
 function onKeyDown(
     opts: Options,
     event: *,
-    editor: *
+    editor: *,
+    next: *
 ): void | any {
     // Only handle events in cells
     if (!editor.isSelectionInTable()) {
-        return undefined;
+        return next();
     }
 
     // Build arguments list
-    const args = [event, editor, opts];
+    const args = [event, editor, opts, next];
 
     switch (event.key) {
         case KEY_ENTER:
@@ -45,7 +46,7 @@ function onKeyDown(
         case KEY_UP:
             return onUpDown(...args);
         default:
-            return undefined;
+            return next();
     }
 }
 

@@ -8,7 +8,8 @@ import type Options from '../options';
 function onUpDown(
     event: *,
     editor: *,
-    opts: Options
+    opts: Options,
+    next: *
 ): void | Change {
     const { value } = editor;
     const direction = event.key === 'ArrowUp' ? -1 : +1;
@@ -19,15 +20,15 @@ function onUpDown(
         (pos.isLastRow() && direction === +1)
     ) {
         // Let the default behavior move out of the table
-        return undefined;
+        return next();
     }
 
     if (direction === -1 && !pos.isTopOfCell()) {
-        return undefined;
+        return next();
     }
 
     if (direction === +1 && !pos.isBottomOfCell()) {
-        return undefined;
+        return next();
     }
 
     event.preventDefault();

@@ -10,11 +10,12 @@ import type Options from '../options';
 function onModEnter(
     event: *,
     editor: *,
-    opts: Options
+    opts: Options,
+    next: *
 ): void | Change {
     const { value } = editor;
     if (!value.selection.isCollapsed) {
-        return undefined;
+        return next();
     }
 
     event.preventDefault();

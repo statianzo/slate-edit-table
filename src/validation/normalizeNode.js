@@ -10,9 +10,9 @@ function normalizeNode(opts: Options) {
     const isRow = node => node.type === opts.typeRow;
     const countNodes = row => row.nodes.size;
 
-    return node => {
+    return (node, editor, next) => {
         if (node.type !== opts.typeTable) {
-            return undefined;
+            return next();
         }
         const rows = node.nodes.filter(isRow);
         const maxColumns = Math.max(
@@ -25,7 +25,7 @@ function normalizeNode(opts: Options) {
         );
 
         if (rowsMissingColumns.isEmpty()) {
-            return undefined;
+            return next();
         }
 
         return change => {

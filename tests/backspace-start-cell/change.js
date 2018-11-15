@@ -4,7 +4,7 @@ export default function(editor) {
   const {value} = editor;
   const blockStart = value.document.getDescendant('anchor');
 
-  const withCursor = editor.moveToStartOfNode(blockStart);
+  editor.moveToStartOfNode(blockStart);
 
   const result = editor.run(
     'onKeyDown',
@@ -12,8 +12,7 @@ export default function(editor) {
       key: 'Backspace',
       preventDefault() {},
       stopPropagation() {},
-    },
-    withCursor
+    }
   );
 
   expect(result).toBe(editor);

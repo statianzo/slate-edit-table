@@ -7,7 +7,8 @@ import { clearCell } from '../changes';
 function onBackspace(
     event: *,
     editor: *,
-    opts: Options
+    opts: Options,
+    next: *
 ): void | Change {
     const { value } = editor;
     const { startBlock, selection, endBlock, document} = value;
@@ -24,7 +25,7 @@ function onBackspace(
     if (selection.start.offset === 0 && isCollapsed && startBlockIndex === 0) {
         if (editor.isVoid(startBlock)) {
             // Delete the block normally if it is a void block
-            return undefined;
+            return next();
         }
 
         event.preventDefault();
@@ -33,7 +34,7 @@ function onBackspace(
 
     // If "normal" deletion, we continue
     if (startCell === endCell) {
-        return undefined;
+        return next();
     }
 
     // If cursor is between multiple blocks,

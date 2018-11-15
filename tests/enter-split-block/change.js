@@ -2,17 +2,13 @@ import expect from 'expect';
 
 export default function(editor) {
   const blockStart = editor.value.document.getDescendant('anchor');
-  const withCursor = editor.moveToEndOfNode(blockStart);
+  editor.moveToEndOfNode(blockStart);
 
-  const result = editor.run(
-    'onKeyDown',
-    {
-      key: 'Enter',
-      preventDefault() {},
-      stopPropagation() {},
-    },
-    withCursor
-  );
+  const result = editor.run('onKeyDown', {
+    key: 'Enter',
+    preventDefault() {},
+    stopPropagation() {},
+  });
 
   expect(result.value.startBlock.type).toBe('paragraph');
 

@@ -11,7 +11,8 @@ import { insertRow } from '../changes';
 function onEnter(
     event: *,
     editor: *,
-    opts: Options
+    opts: Options,
+    next: *
 ): void | Change {
     event.preventDefault();
     const { selection, document } = editor.value;
@@ -21,7 +22,7 @@ function onEnter(
         !selection.focus.isAtStartOfNode(pos.cell) &&
         !selection.focus.isAtEndOfNode(pos.cell)
     ) {
-        return undefined;
+        return next();
     }
 
     if (event.shiftKey) {

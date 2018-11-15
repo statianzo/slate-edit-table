@@ -3,7 +3,7 @@ export default function(editor) {
   const blockStart = value.document.getDescendant('anchor');
   const blockEnd = value.document.getDescendant('focus');
 
-  const withCursor = editor
+  editor
     .moveToStartOfNode(blockStart)
     .moveFocusToEndOfNode(blockEnd);
 
@@ -13,7 +13,6 @@ export default function(editor) {
       key: 'Backspace',
       preventDefault() {},
       stopPropagation() {},
-    },
-    withCursor
+    }
   );
 }
