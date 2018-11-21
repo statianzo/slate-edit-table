@@ -3,11 +3,9 @@
 import expect from 'expect';
 import fs from 'fs';
 import path from 'path';
-import { Value, Editor, KeyUtils } from 'slate';
+import {Editor, KeyUtils } from 'slate';
 import hyperprint from 'slate-hyperprint';
 import EditTable from '../src';
-
-const PLUGIN = EditTable();
 
 describe('slate-edit-table', () => {
     const tests = fs.readdirSync(__dirname);
@@ -23,9 +21,9 @@ describe('slate-edit-table', () => {
             const expected =
                 fs.existsSync(expectedPath) && require(expectedPath).default;
 
-            const runChange = require(path.resolve(dir, 'change.js')).default;
+            const {pluginOptions, default: runChange} = require(path.resolve(dir, 'change.js'));
             const editor = new Editor({
-                plugins: [PLUGIN],
+                plugins: [EditTable(pluginOptions)],
                 value: input,
             });
 

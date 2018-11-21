@@ -19,7 +19,8 @@ class Options extends Record({
     typeRow: 'table_row',
     typeCell: 'table_cell',
     typeContent: 'paragraph',
-    exitBlockType: 'paragraph'
+    exitBlockType: 'paragraph',
+    insertRowOnEnter: true,
 }) {
     // Done as comments to prevent defining properties
     // https://github.com/babel/babel/issues/8417
