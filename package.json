@@ -1,7 +1,7 @@
 {
   "name": "@domoinc/slate-edit-table",
   "description": "A Slate plugin to handle keyboard events in tables.",
-  "version": "0.20.2",
+  "version": "0.20.3",
   "license": "Apache-2.0",
   "repository": "https://git.sr.ht/~statianzo/slate-edit-table",
   "main": "./lib/index.js",
