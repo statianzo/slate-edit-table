@@ -11,6 +11,7 @@ function getPosition(
     editor,
 ): TablePosition {
     const {value} = editor;
+    if (!value.selection.start || !value.selection.start.key) return new TablePosition();
     return TablePosition.create(opts, value.document, value.selection.start.key);
 }
 
