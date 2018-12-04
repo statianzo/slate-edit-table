@@ -10,6 +10,7 @@ import {
     clearCell,
     moveSelection,
     moveSelectionBy,
+    moveSelectionOutOfTable,
     removeRowByKey,
     removeColumnByKey,
     removeTableByKey
@@ -77,7 +78,8 @@ function core(optionsParam: Options | OptionsFormat): Object {
             removeColumn: bindAndScopeChange(opts, removeColumn),
             removeTable: bindAndScopeChange(opts, removeTable),
             moveSelection: bindAndScopeChange(opts, moveSelection),
-            moveSelectionBy: bindAndScopeChange(opts, moveSelectionBy)
+            moveSelectionBy: bindAndScopeChange(opts, moveSelectionBy),
+            moveSelectionOutOfTable: bindAndScopeChange(opts, moveSelectionOutOfTable)
         }
     };
 }

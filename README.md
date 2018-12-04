@@ -14,6 +14,7 @@ npm install @domoinc/slate-edit-table
 ## Features
 
 *   Pressing <kbd>Up</kbd>/<kbd>Down</kbd> moves the cursor to the row above/below
+*   Pressing <kbd>Cmd+Up</kbd>/<kbd>Cmd+Down</kbd> exits the table, into the previous/next block
 *   Pressing <kbd>Enter</kbd> inserts a new row
 *   Pressing <kbd>Cmd+Enter</kbd> (<kbd>Ctrl+Enter</kbd> on Windows/Linux) exits the table, into a new default block
 *   Pressing <kbd>Tab</kbd> moves the cursor to next cell
@@ -83,6 +84,7 @@ Option object you can pass to the plugin.
 *   `[typeRow: string]` — type for the rows.
 *   `[typeCell: string]` — type for the cells.
 *   `[typeContent: string]` — default type for blocks in cells. Also used as default type for blocks created when exiting the table with Mod+Enter.
+*   `[edgeRowExitOnDirection: string]` — pressing up/down in the top row should exit the table instead of default behavior.
 
 ## `EditTable`
 

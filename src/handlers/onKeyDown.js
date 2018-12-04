@@ -7,6 +7,7 @@ import onModEnter from './onModEnter';
 import onTab from './onTab';
 import onBackspace from './onBackspace';
 import onUpDown from './onUpDown';
+import onModUpDown from './onModUpDown';
 
 const KEY_ENTER = 'Enter';
 const KEY_TAB = 'Tab';
@@ -37,14 +38,16 @@ function onKeyDown(
                 return onModEnter(...args);
             }
             return onEnter(...args);
-
         case KEY_TAB:
             return onTab(...args);
         case KEY_BACKSPACE:
             return onBackspace(...args);
         case KEY_DOWN:
         case KEY_UP:
-            return onUpDown(...args);
+          if (event.metaKey) {
+            return onModUpDown(...args);
+          }
+          return onUpDown(...args);
         default:
             return next();
     }

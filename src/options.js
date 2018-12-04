@@ -21,6 +21,7 @@ class Options extends Record({
     typeContent: 'paragraph',
     exitBlockType: 'paragraph',
     insertRowOnEnter: true,
+    edgeRowExitOnDirection: false,
 }) {
     // Done as comments to prevent defining properties
     // https://github.com/babel/babel/issues/8417

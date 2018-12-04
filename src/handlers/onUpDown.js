@@ -2,7 +2,7 @@
 import { type Change } from 'slate';
 
 import { TablePosition } from '../utils';
-import { moveSelectionBy } from '../changes';
+import { moveSelectionBy, moveSelectionOutOfTable } from '../changes';
 import type Options from '../options';
 
 function onUpDown(
@@ -19,8 +19,12 @@ function onUpDown(
         (pos.isFirstRow() && direction === -1) ||
         (pos.isLastRow() && direction === +1)
     ) {
+      if (opts.edgeRowExitOnDirection) {
+        return moveSelectionOutOfTable(opts, editor, direction);
+      } else {
         // Let the default behavior move out of the table
         return next();
+      }
     }
 
     if (direction === -1 && !pos.isTopOfCell()) {

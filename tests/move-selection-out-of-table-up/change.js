@@ -1,0 +1,16 @@
+import expect from 'expect';
+
+export default function(editor) {
+    const { value } = editor;
+    const cursorBlock = value.document.getDescendant('anchor');
+    const offset = 2;
+    editor.moveToRangeOfNode(cursorBlock).moveForward(offset);
+
+    editor.moveSelectionOutOfTable(-1);
+
+    expect(editor.value.startBlock.key).toEqual('dest');
+    const selection = editor.value.selection;
+    expect(selection.start.key).toEqual(selection.end.key);
+
+    return editor;
+}
