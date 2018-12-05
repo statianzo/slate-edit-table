@@ -1,5 +1,5 @@
 // @flow
-import { type Editor, Node } from 'slate';
+import { type Editor } from 'slate';
 
 import { TablePosition } from '../utils';
 import type Options from '../options';

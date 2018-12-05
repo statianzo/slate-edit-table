@@ -11,7 +11,7 @@ import removeTableByKey from './removeTableByKey';
 import clearCell from './clearCell';
 import moveSelection from './moveSelection';
 import moveSelectionBy from './moveSelectionBy';
-import moveSelectionOutOfTable from './MoveSelectionOutOfTable';
+import moveSelectionOutOfTable from './moveSelectionOutOfTable';
 
 export {
     insertTable,
