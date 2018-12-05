@@ -20,6 +20,7 @@ function onUpDown(
         (pos.isLastRow() && direction === +1)
     ) {
       if (opts.edgeRowExitOnDirection) {
+        event.preventDefault();
         return moveSelectionOutOfTable(opts, editor, direction);
       } else {
         // Let the default behavior move out of the table
