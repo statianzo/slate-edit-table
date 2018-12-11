@@ -17,6 +17,14 @@ function schema(opts: Options): Object {
         blocks: {
             [opts.typeTable]: {
                 nodes: [{ match: { type: opts.typeRow } }],
+                parent: [{object: 'document'}],
+                normalize: (editor, {code, node}) => {
+                  if (code === 'parent_object_invalid') {
+                    editor.insertText(node.text);
+                    editor.removeNodeByKey(node.key);
+                  }
+                  return editor;
+                }
             },
             [opts.typeRow]: {
                 nodes: [{ match: { type: opts.typeCell } }],
