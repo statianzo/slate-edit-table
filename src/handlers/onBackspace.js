@@ -17,12 +17,9 @@ function onBackspace(
     const startCell = document.getClosest(startBlock.key, opts.isCell);
     const endCell = document.getClosest(endBlock.key, opts.isCell);
 
-    const startBlockIndex = startCell.nodes.findIndex(
-        block => block.key == startBlock.key
-    );
-
+    const startPath = startCell.getPath(selection.start.key);
     // If a cursor is collapsed at the start of the first block, do nothing
-    if (selection.start.offset === 0 && isCollapsed && startBlockIndex === 0) {
+    if (selection.start.offset === 0 && isCollapsed && startPath && startPath.every(index => index === 0)) {
         if (editor.isVoid(startBlock)) {
             // Delete the block normally if it is a void block
             return next();
