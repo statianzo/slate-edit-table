@@ -4,8 +4,6 @@ export default function(editor) {
   const cursorBlock = editor.value.document.getDescendant('anchor');
   editor.moveToRangeOfNode(cursorBlock);
 
-  const initialPosition = editor.getPosition();
-
   editor.run('onKeyDown', {
     key: 'Tab',
     preventDefault() {},

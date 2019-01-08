@@ -9,9 +9,15 @@
     "prefer-const": "error",
     "object-shorthand": "error",
     "no-useless-rename": "error",
-    "no-use-before-define": ["error", { "functions": false }]
+    "no-use-before-define": ["error", { "functions": false }],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/jsx-no-duplicate-props": "error",
+    "react/jsx-no-undef": "error",
+    "react/jsx-no-target-blank": "error",
+    "react/react-in-jsx-scope": "error"
   },
-  "plugins": ["flowtype"],
+  "plugins": ["flowtype", "react", "import"],
   "env": {
     "mocha": true,
     "node": true,

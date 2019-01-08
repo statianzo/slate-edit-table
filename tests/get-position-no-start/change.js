@@ -1,6 +1,5 @@
 import expect from 'expect';
 import {Value, Selection} from 'slate';
-import TablePosition from '../../src/utils/TablePosition';
 
 export default function(editor) {
     editor.insertTable();
