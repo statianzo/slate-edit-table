@@ -33,13 +33,17 @@
     "http-server": "^0.9.0",
     "immutable": "3",
     "mocha": "^3.0.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.9.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "rollup": "^0.67.1",
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
     "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-replace": "^2.1.0",
     "slate": "^0.44.7",
     "slate-hyperprint": "^2.2.6",
     "slate-hyperscript": "^0.11.17",
@@ -49,7 +53,10 @@
     "prepublish": "yarn run build",
     "build": "rollup -c",
     "lint": "eslint ./",
-    "test": "./node_modules/.bin/mocha ./tests/all.js --compilers js:@babel/register --reporter=list"
+    "test": "./node_modules/.bin/mocha ./tests/all.js --compilers js:@babel/register --reporter=list",
+    "example": "npm-run-all --parallel 'example:** -- --watch'",
+    "example:build": "rollup -c example/example.rollup.config.js",
+    "example:serve": "http-server example -c-1"
   },
   "keywords": [
     "slate"
