@@ -2,7 +2,7 @@
 import Options, { type OptionsFormat } from './options';
 import type { TablePosition as _TablePosition } from './utils/TablePosition';
 import core from './core';
-import { onKeyDown } from './handlers';
+import { onKeyDown, onCopy} from './handlers';
 
 /**
  *  Returns the full plugin object (behavior + rendering + schema)
@@ -16,7 +16,8 @@ function EditTable(
 
     return {
         ...corePlugin,
-        onKeyDown: onKeyDown.bind(null, opts)
+        onKeyDown: onKeyDown.bind(null, opts),
+        onCopy: onCopy.bind(null, opts),
     };
 }
 
