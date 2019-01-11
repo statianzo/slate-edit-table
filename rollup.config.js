@@ -27,6 +27,7 @@ export default {
   ],
   external: [
     'slate',
+    'slate-react',
     'immutable',
   ],
 };
