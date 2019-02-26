@@ -23,7 +23,7 @@ function schema(opts: Options): Object {
                     editor.insertText(node.text);
                     editor.removeNodeByKey(node.key);
                   }
-                  return editor;
+                  return undefined;
                 }
             },
             [opts.typeRow]: {

@@ -16,8 +16,8 @@ function onUpDown(
     const pos = TablePosition.create(opts, value.document, value.selection.start.key);
 
     if (
-        (pos.isFirstRow() && direction === -1) ||
-        (pos.isLastRow() && direction === +1)
+        (pos.isFirstRow() && direction === -1 && pos.isTopOfCell()) ||
+        (pos.isLastRow() && direction === +1 && pos.isBottomOfCell())
     ) {
       if (opts.edgeRowExitOnDirection) {
         event.preventDefault();

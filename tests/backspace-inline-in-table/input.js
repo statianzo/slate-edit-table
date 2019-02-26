@@ -7,10 +7,7 @@ export default (
             <table>
                 <table_row>
                     <table_cell>
-                        <paragraph>Col 0, Row 0</paragraph>
-                        <link></link>
-                        <cursor></cursor>
-                        <paragraph>Col 0, Row 0</paragraph>
+                        <paragraph><text>Col 0, </text><link>Link</link><cursor></cursor> <text>Row 0</text></paragraph>
                     </table_cell>
                     <table_cell>
                         <paragraph>Col 1, Row 0</paragraph>

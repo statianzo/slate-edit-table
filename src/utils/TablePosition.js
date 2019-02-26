@@ -9,6 +9,7 @@ class TablePosition extends Record({
     rowBlock: null,
     cellBlock: null,
     contentBlock: null,
+    node: null,
 }) {
     // Block container for the table
     /*::tableBlock: ?Block;*/
@@ -32,7 +33,12 @@ class TablePosition extends Record({
         key: string,
     ): TablePosition {
         const node = containerNode.getDescendant(key);
-        const ancestors = containerNode.getAncestors(key).push(node);
+        let ancestors = containerNode.getAncestors(key);
+        if (!ancestors) {
+          return new TablePosition();
+        } else {
+          ancestors = ancestors.push(node);
+        }
         const tableBlock = ancestors.findLast(p => p.type === opts.typeTable);
         const rowBlock = ancestors.findLast(p => p.type === opts.typeRow);
 
@@ -47,6 +53,7 @@ class TablePosition extends Record({
             rowBlock,
             cellBlock,
             contentBlock,
+            node,
         });
     }
 
@@ -96,32 +103,33 @@ class TablePosition extends Record({
      * Check to see if this position is at the top of the cell.
      */
     isTopOfCell(): boolean {
-        const { contentBlock, cellBlock } = this;
+        const { cellBlock, node} = this;
 
-        if (!contentBlock || !cellBlock) {
+        if (!cellBlock || !node) {
             return false;
         }
-
-        const { nodes } = cellBlock;
-        const index = nodes.findIndex(block => block.key == contentBlock.key);
-
-        return index == 0;
+        
+        return cellBlock.getPath(node.key).every(index => index === 0);
     }
 
     /**
      * Check to see if this position is at the bottom of the cell.
      */
     isBottomOfCell(): boolean {
-        const { contentBlock, cellBlock } = this;
+        const { node, cellBlock } = this;
 
-        if (!contentBlock || !cellBlock) {
+        if (!node || !cellBlock) {
             return false;
         }
 
-        const { nodes } = cellBlock;
-        const index = nodes.findIndex(block => block.key == contentBlock.key);
+        const ancestors = cellBlock.getAncestors(node.key);
 
-        return index == nodes.size - 1;
+
+        return ancestors.every((node, index) => {
+          const next = ancestors.get(index + 1);
+          if(!next) return true;
+          return node.nodes.indexOf(next) === (node.nodes.size - 1);
+        });
     }
 
     /**
