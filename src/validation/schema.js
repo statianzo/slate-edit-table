@@ -23,7 +23,6 @@ function schema(opts: Options): Object {
                     editor.insertText(node.text);
                     editor.removeNodeByKey(node.key);
                   }
-                  return undefined;
                 }
             },
             [opts.typeRow]: {
@@ -35,8 +34,6 @@ function schema(opts: Options): Object {
                             return onlyCellsInRow(opts, change, error);
                         case PARENT_TYPE_INVALID:
                             return rowOnlyInTable(opts, change, error);
-                        default:
-                            return undefined;
                     }
                 },
             },
@@ -49,8 +46,6 @@ function schema(opts: Options): Object {
                             return onlyBlocksInCell(opts, change, error.node);
                         case PARENT_TYPE_INVALID:
                             return cellOnlyInRow(opts, change, error);
-                        default:
-                            return undefined;
                     }
                 },
             },

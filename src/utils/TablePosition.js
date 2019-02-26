@@ -33,12 +33,7 @@ class TablePosition extends Record({
         key: string,
     ): TablePosition {
         const node = containerNode.getDescendant(key);
-        let ancestors = containerNode.getAncestors(key);
-        if (!ancestors) {
-          return new TablePosition();
-        } else {
-          ancestors = ancestors.push(node);
-        }
+        const ancestors = containerNode.getAncestors(key).push(node);
         const tableBlock = ancestors.findLast(p => p.type === opts.typeTable);
         const rowBlock = ancestors.findLast(p => p.type === opts.typeRow);
 
